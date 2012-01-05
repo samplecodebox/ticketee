@@ -1,7 +1,10 @@
-<%#
-# To change this template, choose Tools | Templates
-# and open the template in the editor.
-%>
+<h2> Projects </h2>
 
-<%= "index.html" %>
+<ul>
+    <% @projects.each do |project|  %>
+      <li>  <%= link_to project.name, project %> </li>
+    <%  end %>
+</ul>
+
+
 <%= link_to "New Project", new_project_path %>
